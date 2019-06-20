@@ -1,11 +1,19 @@
 const initialState = {
   appStatus: {
     isShowByMeaning: true,
-    isFlashCard: true,
-    star: [-1],
-    currentQuestion: 0
+    isFlashCard: false,
+    stars: {
+      [-1]: false,
+      0: false,
+      1: false,
+      2: false,
+      3: false,
+      4: false,
+      5: true
+    },
   },
   word: {
+    currentQuestion: 0,
     words: [],
     dict: {},
     star: {

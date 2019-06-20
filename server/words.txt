@@ -137,7 +137,7 @@ prevent
 reluctance
 ความไม่เต็มใจ
 apathy
-การขาดความกระตือรือร้น
+ไม่กระตือรือร้น
 indifference
 ความไม่สนใจ
 enthrall
@@ -145,7 +145,7 @@ enthrall
 captivate
 หว่านเสน่ห์
 oblique
-อ้อมๆ
+อ้อมๆ เฉียงๆ
 futile
 ไร้ประโยชน์
 crestfallen
@@ -153,7 +153,7 @@ disappointed
 deliberate
 คิดรอบคอบ
 appease
-Make less angry
+ทำให้สงบ
 peccable
 ผิดพลาดได้
 prevail
@@ -176,8 +176,8 @@ equitable
 ยุติธรรม
 overbearing
 เจ้ากี้เจ้าการ
-scandalous
-ซึ่งเสื่อมเสียชื่อเสียง
+scandal
+เรื่องอื้อฉาว
 industrious
 hard-working
 exemplar
@@ -196,3 +196,85 @@ irritable
 ขี้โมโห
 crest
 ยอด
+deceptive
+สร้างความหลงผิด
+artful
+มีเล่ห์เหลี่ยม
+pristine
+บริสุทธิ, [แรกเริ่ม]
+distant
+ห่าง
+malevolent
+มุ่งร้าย evil-minded
+defy
+ท้าทายอำนาจ
+iconoclastic
+Defying tradition
+hoodwink
+ตบตา
+palatable
+พอใจ
+indigenous
+โดยธรรมชาติ
+squander
+ใช้จ่ายสุรุ่ยสุร่าย
+inflict
+สร้างความเจ็บปวด
+exorbitant
+(แพง) มากเกินไป
+excessive
+มากเกินรับได้
+altruism
+ความเห็นแก่ผู้อื่น
+frugal
+ประหยัด
+articulate
+ชัดเจน
+bliss
+ความสุขสุดยอด
+presume
+Assume + probability ex: “presumed dead”
+pellucid
+โปร่งใส
+fragrant
+หอม
+spontaneous
+ซึ่งเป็นไปตามธรรมชาติ
+impede
+กีดขวาง
+erratic
+ไม่แน่ไม่นอน
+hectic
+วุ่นวาย
+fretful
+ซึ่งหงุดหงิด
+rash
+หุนหันพลันแล่น
+prudent
+รอบคอบ/ประหยัด
+reckless
+สะเพร่า
+dissipate
+ใช้ฟุ่มเฟือย (เงิน/เวลา)
+deface
+ทำให้มีตำหนิ
+enamor
+ทำให้ลุ่มหลง
+ornate
+หรูหรา
+dignity
+ความมีเกียรติ
+zenith
+จุดสุดยอด
+denote
+Be a sign of (แสดงถึง)
+conundrum
+ปริศนา
+uproot
+ทำลายทั้งหมด
+sanction
+อนุมัติ
+convolute
+ที่ซับซ้อนมาก
+excruciate
+ทรมานมาก
