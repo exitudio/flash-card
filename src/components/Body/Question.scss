@@ -1,0 +1,33 @@
+.head-question {
+  font-size:30px;
+}
+.focus-item {
+  outline:0 !important;
+  font-size: 20px;
+  &:hover {
+    color: white;
+    background-color: #007bff;
+  }
+  &.correct {
+    color: white;
+    background-color: #28a745;
+  }
+  &.incorrect {
+    color: white;
+    background-color: #dc3545;
+  }
+}
+
+.check {
+  float: right;
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+.next{
+  float: right;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
