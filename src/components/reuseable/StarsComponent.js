@@ -14,6 +14,7 @@ function getCss(stars, buttonStar) {
 const StarsComponent = props => {
   const dispatch = useDispatch();
   const onClickFactory = buttonStar => () => {
+    console.log('buttonStar:', buttonStar, 'props.word:', props.word)
     dispatch(props.action(buttonStar, props.word));
   };
   return (

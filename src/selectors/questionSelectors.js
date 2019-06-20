@@ -11,6 +11,8 @@ export const selectQuestions = createSelector(
     let question = questions[currentQuestion];
     if (question) {
       question = { ...question };
+      question.star = wordDict[question.question].star
+      question.key = question.question;
       if (isShowByMeaning) {
         question.choices = question.choices.map(
           choice => wordDict[choice].meaning
@@ -19,7 +21,6 @@ export const selectQuestions = createSelector(
         question.question = wordDict[question.question].meaning;
       }
     }
-
     return question;
   }
 );

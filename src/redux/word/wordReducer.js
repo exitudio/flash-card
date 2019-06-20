@@ -37,7 +37,7 @@ const wordReducer = (state = initialState.word, action) => {
         action.payload.star
       );
     case CLEAR_WORDS:
-      return state;
+      return initialState.word;
     default:
       return state;
   }

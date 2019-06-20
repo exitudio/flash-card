@@ -9,11 +9,9 @@ import { shuffleArray } from "./helpers";
 const num_answer = 5;
 
 function* startQuize() {
-  yield put(clearWords());
   const starCategories = yield select(state => state.appStatus.stars);
   const starDict = yield select(state => state.word.star);
   const allWords = yield select(state => state.word.words);
-  const wordDict = yield select(state => state.word.dict);
 
   const questionWords = Object.keys(starCategories).reduce((words, star) => {
     if (!!starCategories[star]) {
@@ -27,7 +25,6 @@ function* startQuize() {
       choices: sampleSize(allWords, num_answer - 1),
       correctAnswer: Math.floor(Math.random() * num_answer),
       answer: -1,
-      star: wordDict[word].star
     };
     while (obj.choices.includes(obj.question)) {
       obj.choices = sampleSize(allWords, num_answer - 1);
@@ -41,6 +38,7 @@ function* startQuize() {
 }
 
 function* loadWords() {
+  yield put(clearWords());
   const data = yield axios.get("/api/getwords");
   const words = data.data.data;
   yield put(addWords(words));
@@ -54,7 +52,7 @@ function* postStarApi({ payload: { word, star } }) {
 function* appStatus() {
   yield takeEvery(ActionTypes.INIT_APP, loadWords);
   yield takeEvery(ActionTypes.POST_STAR, postStarApi);
-  yield takeEvery(ActionTypes.TOGGLE_STAR, startQuize);
+  yield takeEvery(ActionTypes.TOGGLE_STAR, loadWords);
 }
 export default function*() {
   yield all([call(appStatus)]);

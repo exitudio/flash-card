@@ -32,8 +32,10 @@ const columns = [
 export default function TableWords() {
   const allWords = useSelector(selectWords);
   const [isHidingMeaning, hideMeaning] = useState(false);
-  const handleChange = (_, dropDown) => {
-    hideMeaning(dropDown.meaning.length > 0);
+  const handleChange = (_, { meaning }) => {
+    if (meaning) {
+      hideMeaning(meaning.length > 0);
+    }
   };
   const dataSource = allWords.map((word, i) => {
     return {

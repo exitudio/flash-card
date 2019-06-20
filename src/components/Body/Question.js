@@ -40,7 +40,7 @@ export default function Question() {
       <Card.Header className="head-question">
         {question.question}
         <br/>
-        <StarsComponent stars={question.star} word={question.word} action={postStar} />
+        <StarsComponent stars={question.star} word={question.key} action={postStar} />
         {question.correctAnswer === question.answer ? (
           <Next
             className="next"
