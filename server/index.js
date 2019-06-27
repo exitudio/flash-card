@@ -5,7 +5,7 @@ var fs = require("fs");
 var app = express();
 app.use(bodyParser.json());
 app.get("/api/getwords", function(req, res) {
-  const wordData = fs.readFileSync("server/words.txt", "utf8");
+  const wordData = fs.readFileSync(`server/${req.query.type}.txt`, "utf8");
   const rawWords = wordData.split("\n");
 
   const starData = fs.readFileSync("server/stars.json", "utf8");

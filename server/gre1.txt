@@ -88,7 +88,7 @@ precedent
 อยู่มาก่อน
 amiable
 เป็นมิตร
-tarnish/disgrace
+tarnish
 ทำให้เสื่อมเสีย
 diligent
 ขยัน
@@ -137,7 +137,7 @@ prevent
 reluctance
 ความไม่เต็มใจ
 apathy
-ไม่กระตือรือร้น
+Absence of emotion
 indifference
 ความไม่สนใจ
 enthrall
@@ -191,9 +191,9 @@ exemplify
 adamant
  แน่วแน่
 detrimental
-Causing harm
+Causing harm/  ก่อความเสียหาย
 irritable
-ขี้โมโห
+ระคายเคือง
 crest
 ยอด
 deceptive
@@ -249,7 +249,7 @@ hectic
 fretful
 ซึ่งหงุดหงิด
 rash
-หุนหันพลันแล่น
+ไม่ระวัง
 prudent
 รอบคอบ/ประหยัด
 reckless
@@ -278,3 +278,49 @@ convolute
 ที่ซับซ้อนมาก
 excruciate
 ทรมานมาก
+aesthetic
+สุนทรียศาสตร์
+irrevocable
+ที่เปลี่ยนแปลงไม่ได้
+reservation
+doubt
+thrifty
+ประหยัด
+disgrace
+ทำให้เสื่อมเสีย
+scorn
+ดูหมิ่น
+modest
+ordinary/ simple
+intimation
+พูดเป็นนัย
+unviable
+Not able to work
+sporadic
+ซึ่งเกิดขึ้นนานๆ ครั้ง
+insufferable
+Unbearable / ทนไม่ได้
+appreciable
+noticeable
+cumulative
+สะสม
+abysmal
+เลวร้ายมาก
+desist
+ระงับ
+keen
+หลักแหลม
+empiricism
+Action based on practice
+evasive
+หนีปัญหา
+thorough
+ละเอียดถี่ถ้วน
+nonchalant
+เมินเฉย
+misogynist
+คนเกลียดผู้หญิง
+diminutive
+เล็กมาก
+impervious
+Unaffected by

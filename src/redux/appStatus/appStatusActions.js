@@ -11,3 +11,7 @@ export function toggleMode(mode) {
 export function toggleStar(star) {
   return { type: ActionTypes.TOGGLE_STAR, payload: star };
 }
+
+export function changeVocabType(type) {
+  return { type: ActionTypes.CHANGE_VOCAB_TYPE, payload: type };
+}

@@ -1,11 +1,15 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMode, toggleStar } from "../../redux/appStatus/appStatusActions";
+import {
+  toggleMode,
+  toggleStar,
+  changeVocabType
+} from "../../redux/appStatus/appStatusActions";
 import StarsComponent from "../reuseable/StarsComponent";
 
 function getVariantName(bool) {
@@ -13,11 +17,12 @@ function getVariantName(bool) {
 }
 
 export default function Header() {
-  const { isShowByMeaning, isFlashCard, stars } = useSelector(
+  const { isShowByMeaning, isFlashCard, stars, vocabType } = useSelector(
     state => state.appStatus
   );
   const dispatch = useDispatch();
   const onClickModeFactory = mode => () => dispatch(toggleMode(mode));
+  const onClickChangeVocabType = type => () => dispatch(changeVocabType(type));
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">EXIT Card</Navbar.Brand>
@@ -38,10 +43,17 @@ export default function Header() {
           </Button>
         </ButtonGroup>
         <StarsComponent stars={stars} action={toggleStar} />
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
-        </Form>
+        <DropdownButton
+          id="dropdown-basic-button"
+          title={vocabType}
+          onClick={onClickChangeVocabType}
+        >
+          {["gre1", "gre2", "gre50"].map((type, i) => (
+            <Dropdown.Item key={i} onClick={onClickChangeVocabType(type)}>
+              {type}
+            </Dropdown.Item>
+          ))}
+        </DropdownButton>
       </Navbar.Collapse>
     </Navbar>
   );

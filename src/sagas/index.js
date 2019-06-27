@@ -24,7 +24,7 @@ function* startQuize() {
       question: word,
       choices: sampleSize(allWords, num_answer - 1),
       correctAnswer: Math.floor(Math.random() * num_answer),
-      answer: -1,
+      answer: -1
     };
     while (obj.choices.includes(obj.question)) {
       obj.choices = sampleSize(allWords, num_answer - 1);
@@ -39,7 +39,8 @@ function* startQuize() {
 
 function* loadWords() {
   yield put(clearWords());
-  const data = yield axios.get("/api/getwords");
+  const vocabType = yield select(state => state.appStatus.vocabType);
+  const data = yield axios.get(`/api/getwords?type=${vocabType}`);
   const words = data.data.data;
   yield put(addWords(words));
   yield call(startQuize);
@@ -51,8 +52,9 @@ function* postStarApi({ payload: { word, star } }) {
 
 function* appStatus() {
   yield takeEvery(ActionTypes.INIT_APP, loadWords);
-  yield takeEvery(ActionTypes.POST_STAR, postStarApi);
   yield takeEvery(ActionTypes.TOGGLE_STAR, loadWords);
+  yield takeEvery(ActionTypes.CHANGE_VOCAB_TYPE, loadWords);
+  yield takeEvery(ActionTypes.POST_STAR, postStarApi);
 }
 export default function*() {
   yield all([call(appStatus)]);

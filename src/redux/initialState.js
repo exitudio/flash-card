@@ -11,6 +11,7 @@ const initialState = {
       4: false,
       5: true
     },
+    vocabType:"gre1"
   },
   word: {
     currentQuestion: 0,

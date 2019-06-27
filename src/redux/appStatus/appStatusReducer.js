@@ -1,8 +1,8 @@
 import {
   INIT_APP,
-  GOTO_QUESTION,
   TOGGLE_MODE,
-  TOGGLE_STAR
+  TOGGLE_STAR,
+  CHANGE_VOCAB_TYPE
 } from "../actionTypes";
 import initialState from "../initialState";
 import { toggle } from "dot-prop-immutable";
@@ -20,6 +20,8 @@ const appStatusReducer = (state = initialState.appStatus, action) => {
       };
     case TOGGLE_STAR:
       return toggle(state, `stars.${action.payload}`);
+    case CHANGE_VOCAB_TYPE:
+      return { ...state, vocabType: action.payload };
     default:
       return state;
   }
