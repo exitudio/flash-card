@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ekkasit.com/public/pages/flash-card",
   "proxy": "http://localhost:4001",
   "name": "flash-card",
   "version": "0.1.0",

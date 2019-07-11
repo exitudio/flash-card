@@ -11,6 +11,7 @@ const initialState = {
       4: false,
       5: true
     },
+    currentStar:5,
     vocabType:"gre1"
   },
   word: {

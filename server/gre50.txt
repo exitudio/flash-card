@@ -41,8 +41,10 @@ loquacious
 pragmatic
 เน้นปฏิบัติ
 volatile
-เปลี่ยนแปลงอย่างรวดเร็ว
+เปลี่ยนแปลงอย่างรวดเร็ว/ ระเหย
 ephemeral
 lasting for a short time
 laconic
 สั้นกระชับ
+cacophony
+unpleasant mixture of sounds

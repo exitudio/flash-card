@@ -74,7 +74,7 @@ jovial
 Merry / เริงร่า สนุกสนาน
 disheartened
 Losing confidence
-audacity/boldness
+boldness
 ความกล้าหาญ
 retract
 ถอนคำพูด
@@ -157,7 +157,7 @@ appease
 peccable
 ผิดพลาดได้
 prevail
-มีอำนาจเหนือกว่า
+มีอำนาจเหนือกว่า/ be current
 triumph
 ชัยชนะ
 candid
@@ -191,7 +191,7 @@ exemplify
 adamant
  แน่วแน่
 detrimental
-Causing harm/  ก่อความเสียหาย
+Causing harm ก่อความเสียหาย
 irritable
 ระคายเคือง
 crest
@@ -229,7 +229,7 @@ altruism
 frugal
 ประหยัด
 articulate
-ชัดเจน
+สื่อสารได้ดี
 bliss
 ความสุขสุดยอด
 presume
@@ -324,3 +324,7 @@ diminutive
 เล็กมาก
 impervious
 Unaffected by
+audacity
+Boldness+ / disrespect-
+intimate
+private/personal/close ex intimate friend = close friend

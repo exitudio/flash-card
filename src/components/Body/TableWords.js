@@ -6,13 +6,13 @@ import { selectWords } from "../../selectors/questionSelectors";
 import { postStar } from "../../redux/word/wordActions";
 import StarsComponent from "../reuseable/StarsComponent";
 
-const ToggleMeaning = ({ data, isHidingMeaning }) => {
-  const [isHideMouse, hideMouse] = useState(true);
+const ToggleMeaning = ({ data, isShowingMeaningFilter }) => {
+  const [isShowingMouse, showMouse] = useState(isShowingMeaningFilter);
   return (
     <div
-      style={{ opacity: isHidingMeaning && isHideMouse ? 0 : 100 }}
-      onMouseOver={() => hideMouse(false)}
-      onMouseOut={() => hideMouse(true)}
+      style={{ opacity: isShowingMouse || isShowingMeaningFilter ? 100 : 0 }}
+      onMouseOver={() => showMouse(true)}
+      onMouseOut={() => showMouse(false)}
     >
       {data}
     </div>
@@ -28,10 +28,13 @@ const columns = [
     title: "Meaning",
     dataIndex: "meaning",
     key: "meaning",
-    filters: [{ text: "Hide", value: "hide" }],
+    filters: [{ text: "Show", value: "show" }],
     render: (data, record) => {
       return (
-        <ToggleMeaning data={data} isHidingMeaning={record.isHidingMeaning} />
+        <ToggleMeaning
+          data={data}
+          isShowingMeaningFilter={record.isShowingMeaningFilter}
+        />
       );
     }
   },
@@ -48,21 +51,31 @@ const columns = [
 ];
 export default function TableWords() {
   const allWords = useSelector(selectWords);
-  const [isHidingMeaning, hideMeaning] = useState(true);
+  const vocabType = useSelector(state => state.appStatus.vocabType);
+  const stars = useSelector(state => state.appStatus.stars);
+  const starStr = Object.keys(stars).reduce((str, starIndex) => {
+    if (stars[starIndex]) {
+      return `${str}-${starIndex}`;
+    }
+    return str;
+  }, "");
+
+  const [isShowingMeaningFilter, showMeaning] = useState(false);
   const handleChange = (_, { meaning }) => {
-    if (meaning) hideMeaning(meaning.length > 0);
+    if (meaning) showMeaning(meaning.length > 0);
   };
   const dataSource = allWords.map((word, i) => {
     return {
       key: i,
       word: word.word,
       meaning: word.meaning,
-      isHidingMeaning,
+      isShowingMeaningFilter,
       star: word.star
     };
   });
   return (
     <Table
+      key={`${vocabType}-${starStr}`}
       dataSource={dataSource}
       columns={columns}
       onChange={handleChange}
