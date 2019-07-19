@@ -1,5 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require("path");
+var fallback = require("express-history-api-fallback");
 var fs = require("fs");
 
 var app = express();
@@ -18,7 +20,7 @@ app.get("/api/getwords", function(req, res) {
     words.push({
       word,
       meaning,
-      star: !!starObject[word] ? starObject[word]: -1
+      star: !!starObject[word] ? starObject[word] : -1
     });
   }
   return res.status(200).json({ data: words });
@@ -32,7 +34,13 @@ app.post("/api/poststar", function(req, res) {
   return res.status(200).json({ status: "success" });
 });
 
-var listener = app.listen(4001, function() {
+app.use(express.static(path.join(__dirname, "../build")));
+app.use(fallback("../build/index.html", { root: __dirname }));
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
+
+var listener = app.listen(process.env.PORT, function() {
   console.log("Listening on port " + listener.address().port); //Listening on port 8888
 });
 
