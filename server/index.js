@@ -52,12 +52,10 @@ app.get("/api/get_data_list", function(req, res) {
 });
 
 app.get("/api/override_from_server", async function(req, res) {
-  const baseUrl = "http://localhost:4001";
-  const listData = await axios.get(`${baseUrl}/api/get_data_list`);
-  console.log("data:", listData.data.payload);
-  const textData = await axios.get(`${baseUrl}/${listData.data.payload[0]}`);
-  console.log("textData:", textData.data);
-  fs.writeFileSync(`server/data/${listData.data.payload[0]}`, textData.data);
+  const baseUrl = "https://flash-card-exit.herokuapp.com";
+  const textData = await axios.get(`${baseUrl}/stars.json`);
+  fs.writeFileSync("server/data/stars1.json", JSON.stringify(textData.data));
+  return res.status(200).json({ status: "success" });
 });
 
 app.use(express.static(path.join(__dirname, "../build")));
