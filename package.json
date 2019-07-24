@@ -28,8 +28,8 @@
   },
   "scripts": {
     "start": "babel-node server",
-    "start:dev": "PORT=4001 npm run watch:server & PORT=4000 react-scripts start",
-    "watch:server": "nodemon \"./server/index.js\" --watch \"./server\" --ignore 'server/*.json' --exec babel-node",
+    "start:dev": "npm run watch:server & PORT=4000 react-scripts start",
+    "watch:server": "PORT=4001 nodemon \"./server/index.js\" --watch \"./server\" --ignore 'server/*.json' --exec babel-node",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
