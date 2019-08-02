@@ -68,7 +68,7 @@ var listener = app.listen(process.env.PORT, function() {
  */
 var http = require("http")
 setInterval(function () {
-  http.get("https://flash-card-exit.herokuapp.com/")
-}, 100000) // every 5 minutes (300000)
+  axios.get("https://flash-card-exit.herokuapp.com/")
+}, 300000) // every 5 minutes (300000)
 
 module.exports = app;
