@@ -51,13 +51,6 @@ app.get("/api/get_data_list", function(req, res) {
   });
 });
 
-app.get("/api/override_from_server", async function(req, res) {
-  const baseUrl = "https://flash-card-exit.herokuapp.com";
-  const textData = await axios.get(`${baseUrl}/stars.json`);
-  fs.writeFileSync("server/data/stars.json", JSON.stringify(textData.data));
-  return res.status(200).json({ status: "success" });
-});
-
 app.use(express.static(path.join(__dirname, "../build")));
 app.use(express.static(path.join(__dirname, "../server/data")));
 app.use(fallback("../build/index.html", { root: __dirname }));
@@ -76,6 +69,6 @@ var listener = app.listen(process.env.PORT, function() {
 var http = require("http")
 setInterval(function () {
   http.get("https://flash-card-exit.herokuapp.com/")
-}, 300000) // every 5 minutes (300000)
+}, 100000) // every 5 minutes (300000)
 
 module.exports = app;
