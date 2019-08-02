@@ -69,4 +69,13 @@ var listener = app.listen(process.env.PORT, function() {
   console.log("Listening on port " + listener.address().port); //Listening on port 8888
 });
 
+
+/**
+ * Keep awake for heroku
+ */
+var http = require("http")
+setInterval(function () {
+  http.get("https://flash-card-exit.herokuapp.com/")
+}, 300000) // every 5 minutes (300000)
+
 module.exports = app;
