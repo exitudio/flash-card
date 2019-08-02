@@ -66,7 +66,6 @@ var listener = app.listen(process.env.PORT, function() {
 /**
  * Keep awake for heroku
  */
-var http = require("http")
 setInterval(function () {
   axios.get("https://flash-card-exit.herokuapp.com/")
 }, 300000) // every 5 minutes (300000)
