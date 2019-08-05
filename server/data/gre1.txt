@@ -67,7 +67,7 @@ allowance
 brittle
 เปราะ
 malleable
-moldable
+Moldable / easily influenced
 sturdy
 robust
 jovial
@@ -97,7 +97,7 @@ archaic
 jargon
 ภาษาเฉพาะกลุ่ม
 deceive
-หลอกลวง
+หลอกลวง/ ทำให้เข้าใจผิดแต่ไม่ malevolence ไม่เหมือน deceit[N] Ex. The magician employed a careful deception to make the car disappear. (if use deceit here, it means steal)
 tyrant
 autocratic/ผู้ปกครองเผด็จการ
 telling
