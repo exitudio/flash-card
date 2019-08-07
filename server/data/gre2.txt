@@ -21,7 +21,7 @@ assail
 discord
 ไม่ลงรอยกัน
 animosity
-ความเป็นปรปักษ์
+ความเกลียด/ความเป็นปรปักษ์
 transient
 ชั่วคราว
 jocular
@@ -31,7 +31,7 @@ harmless
 pith
 สาระสำคัญ
 undermine
-weaken
+ทำให้กร่อน (เหมือนการขุดเหมืองข้างล่างแหล่ะ)
 thwart
 ขัดขวาง
 hamper
