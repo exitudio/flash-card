@@ -30,9 +30,10 @@
     "start": "babel-node server",
     "start:dev": "npm run watch:server & PORT=4000 react-scripts start",
     "watch:server": "PORT=4001 nodemon \"./server/index.js\" --watch \"./server\" --ignore 'server/*.json' --exec babel-node",
-    "copy": "node server/command.js&git add .&npm run git-commit&npm run git-push&open https://dashboard.heroku.com/apps/flash-card-exit/deploy/github",
+    "copy": "node server/command.js&git add .&npm run git-commit&npm run git-push&npm run heroku-open",
     "git-commit": "git commit -am \"update-words\"",
     "git-push": "git push",
+    "heroku-open": "open https://dashboard.heroku.com/apps/flash-card-exit/deploy/github",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
