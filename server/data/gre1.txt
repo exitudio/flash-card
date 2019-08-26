@@ -273,7 +273,7 @@ conundrum
 uproot
 ทำลายทั้งหมด
 sanction
-อนุมัติ
+[V,N] อนุมัติ/ การลงโทษทางกฏหมาย
 convolute
 ที่ซับซ้อนมาก
 excruciate

@@ -48,7 +48,7 @@ export default function Header() {
           title={vocabType}
           onClick={onClickChangeVocabType}
         >
-          {["gre1", "gre2", "gre50"].map((type, i) => (
+          {["gre1", "gre2", "gre3", "gre50"].map((type, i) => (
             <Dropdown.Item key={i} onClick={onClickChangeVocabType(type)}>
               {type}
             </Dropdown.Item>
