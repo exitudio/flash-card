@@ -1,3 +1,4 @@
+
 accolade
 รางวัล/ ได้รับเกียรติ
 decorum
@@ -10,8 +11,8 @@ inevitable
 ซึ่งหลีกเลี่ยงไม่ได้
 veritable
 จริง
-venge
-แก้แค้น 
+vengeful
+ซึ่งอยากแก้แค้น 
 deceit
 การหลอกลวง/ duplicity
 mimicry
@@ -71,7 +72,7 @@ jocular
 avid
 Enthusiastic+keen ex. avid birdwatcher
 implausible
-unbelievable
+Unbelievable / plausible=มีเหตุผล
 doleful
 เสียใจมาก
 truncate
@@ -93,7 +94,7 @@ irk
 pester
 รบกวน
 spartan
-เรียบง่าย
+เรียบง่าย/ a person of great courage and self-discipline
 thoroughgoing
 เต็มที่
 jut
@@ -101,8 +102,8 @@ jut
 obtuse
 ทึ่ม
 swindle
-โกง/ pacify
-dupe
+โกง
+dupe/ duplicity
 หลอกโกง/ swindle
 meticulous
 พิถีพิถัน
@@ -112,3 +113,31 @@ banality
 ความน่าเบื่อ, ซ้ำซาก, ความtrite
 impending
 About to happen
+pacify
+ทำให้สงบ (ความโกรธ, ความหิว)
+indecorous
+ไม่ถูกกาลเทศะ
+row
+Angry dispute ex. The Prime Minister looked very foolish after his row
+docile
+เชื่อง
+miser
+คนขี้งก/ คนที่ stingy
+perennial
+ยาวนาน
+affluent
+ร่ำรวย
+paternal
+เกี่ยวกับพ่อ
+haphazard
+unorganized
+assert
+ยืนยัน
+prominent
+สะดุดตา/ standing out
+intimate
+private/personal/close ex intimate friend = close friend
+cerebral
+มีความคิด
+outgoing
+เข้าสังคมง่าย
