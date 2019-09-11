@@ -4,6 +4,7 @@ var path = require("path");
 var fallback = require("express-history-api-fallback");
 var fs = require("fs");
 var axios = require("axios");
+var exec = require('child_process').exec;
 
 var app = express();
 app.use(bodyParser.json());
@@ -51,6 +52,28 @@ app.get("/api/get_data_list", function(req, res) {
   });
 });
 
+app.get("/api/commit", function() {
+  console.log('commit')
+  const dir = exec("git add .", function(err, stdout, stderr) {
+    if (err) {
+      // should have err.code here?
+    }
+    console.log(stdout);
+  });
+  exec("git commit -am 'update'", function(err, stdout, stderr) {
+    if (err) {
+      // should have err.code here?
+    }
+    console.log(stdout);
+  });
+  exec("git push", function(err, stdout, stderr) {
+    if (err) {
+      // should have err.code here?
+    }
+    console.log(stdout);
+  });
+});
+
 app.use(express.static(path.join(__dirname, "../build")));
 app.use(express.static(path.join(__dirname, "../server/data")));
 app.use(fallback("../build/index.html", { root: __dirname }));
@@ -62,12 +85,11 @@ var listener = app.listen(process.env.PORT, function() {
   console.log("Listening on port " + listener.address().port); //Listening on port 8888
 });
 
-
 /**
  * Keep awake for heroku
  */
-setInterval(function () {
-  axios.get("https://flash-card-exit.herokuapp.com/")
-}, 300000) // every 5 minutes (300000)
+setInterval(function() {
+  axios.get("https://flash-card-exit.herokuapp.com/");
+}, 300000); // every 5 minutes (300000)
 
 module.exports = app;
