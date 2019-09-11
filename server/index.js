@@ -53,25 +53,16 @@ app.get("/api/get_data_list", function(req, res) {
 });
 
 app.get("/api/commit", function() {
+  function log(err, stdout, stderr) {
+    if (err) {
+      console.err(err);
+    }
+    console.log(stdout);
+  }
   console.log('commit')
-  const dir = execSync("git add .", function(err, stdout, stderr) {
-    if (err) {
-      // should have err.code here?
-    }
-    console.log(stdout);
-  });
-  execSync("git commit -am 'update'", function(err, stdout, stderr) {
-    if (err) {
-      // should have err.code here?
-    }
-    console.log(stdout);
-  });
-  execSync("git push", function(err, stdout, stderr) {
-    if (err) {
-      // should have err.code here?
-    }
-    console.log(stdout);
-  });
+  execSync("git add .", log);
+  execSync("git commit -am 'update'", log);
+  execSync("git push", log);
 });
 
 app.use(express.static(path.join(__dirname, "../build")));
