@@ -27,7 +27,6 @@ export default function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">EXIT Card</Navbar.Brand>
-      <Button onClick={() => Axios.get(`/api/commit`)}>Save</Button>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <ButtonGroup aria-label="Basic example" className="mr-2">
@@ -57,6 +56,7 @@ export default function Header() {
           ))}
         </DropdownButton>
       </Navbar.Collapse>
+      <Button onClick={() => Axios.get(`/api/commit`)}>Save</Button>
     </Navbar>
   );
 }
