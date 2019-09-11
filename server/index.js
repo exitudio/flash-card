@@ -4,7 +4,7 @@ var path = require("path");
 var fallback = require("express-history-api-fallback");
 var fs = require("fs");
 var axios = require("axios");
-var exec = require('child_process').exec;
+var execSync = require('child_process').execSync;
 
 var app = express();
 app.use(bodyParser.json());
@@ -54,19 +54,19 @@ app.get("/api/get_data_list", function(req, res) {
 
 app.get("/api/commit", function() {
   console.log('commit')
-  const dir = exec("git add .", function(err, stdout, stderr) {
+  const dir = execSync("git add .", function(err, stdout, stderr) {
     if (err) {
       // should have err.code here?
     }
     console.log(stdout);
   });
-  exec("git commit -am 'update'", function(err, stdout, stderr) {
+  execSync("git commit -am 'update'", function(err, stdout, stderr) {
     if (err) {
       // should have err.code here?
     }
     console.log(stdout);
   });
-  exec("git push", function(err, stdout, stderr) {
+  execSync("git push", function(err, stdout, stderr) {
     if (err) {
       // should have err.code here?
     }
